@@ -12,9 +12,8 @@ using UnityEngine;
 
 namespace MailCountdown
 {
-    // Plugin compagnon : alertes sonores + notification native du jeu. Ne touche pas au compteur (WorldMailCountdown 1.2.0).
-    [BepInPlugin("praedlab.mailalerts", "World Mail Alerts", "2.0.0")]
-    [BepInDependency("praedlab.mailcountdown", "1.2.0")]
+    // Alertes sonores + notification native du jeu. Independant : fonctionne seul ou avec World Mail Countdown.
+    [BepInPlugin("praedlab.mailalerts", "World Mail Alerts", "2.0.1")]
     public class MailAlerts : BaseUnityPlugin
     {
         static ManualLogSource Log;
@@ -313,7 +312,7 @@ namespace MailCountdown
             cfgTest = Config.Bind(T, K(1, "test"), false, D("test"));
             cfgListen = Config.Bind(T, K(2, "listen"), "None", new ConfigDescription(D("listen"), new AcceptableValueList<string>(SoundNames)));
             cfgListen.SettingChanged += delegate { if (cfgListen.Value != "None") pendingListen = cfgListen.Value; };
-            Log.LogInfo("World Mail Alerts 2.0.0 charge (" + Loc.Lang + ")");
+            Log.LogInfo("World Mail Alerts 2.0.1 charge (" + Loc.Lang + ")");
         }
 
         // ---------- sons (rendu sur un thread, lecture sur le thread principal) ----------

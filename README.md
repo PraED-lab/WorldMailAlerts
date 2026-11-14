@@ -1,8 +1,8 @@
-# 📬 World Mail Alerts 2.0.0
+# 📬 World Mail Alerts 2.0.1
 
 **Never lose a mail with items again, and keep track of everything your mail brings in.** A BepInEx plugin for SPT 4.1.x that warns you with a sound and the game's own notification when a mail with items is about to expire, shows your flea market sales with their price, and adds a **history window** with a **daily money graph**, built from the game's own interface. Menu and notifications in 16 languages.
 
-![version](https://img.shields.io/badge/version-2.0.0-blue) ![SPT](https://img.shields.io/badge/SPT-4.1.x-green) ![license](https://img.shields.io/badge/license-MIT-lightgrey)
+![version](https://img.shields.io/badge/version-2.0.1-blue) ![SPT](https://img.shields.io/badge/SPT-4.1.x-green) ![license](https://img.shields.io/badge/license-MIT-lightgrey)
 
 ![Daily money graph](screenshots/graph.png)
 
@@ -66,15 +66,14 @@ Setting `00. Language`: **Auto** uses your system language (English is the fallb
 
 ## 📦 Compatibility
 - SPT 4.1.x (BepInEx 5)
-- **Requires [World Mail Countdown](https://sp-mod.com/mod/3310/world-mail-countdown-add-16-translations) 1.2.0 or newer.** World Mail Alerts does not load without it.
+- **Standalone**: no other mod required. Works great alongside [World Mail Countdown](https://sp-mod.com/mod/3310/world-mail-countdown-add-16-translations) (live countdown on every package).
 - Optional: **Configuration Manager** (F12) for the settings gear.
 
 ## 🔧 Installation
-1. Install **World Mail Countdown** first.
-2. Copy the `BepInEx` folder into your SPT folder:
+1. Copy the `BepInEx` folder into your SPT folder.
+2. Optional: install [World Mail Countdown](https://sp-mod.com/mod/3310/world-mail-countdown-add-16-translations) for a live countdown on every package.
 
 ```
-BepInEx/plugins/WorldMailCountdown.dll   (World Mail Countdown)
 BepInEx/plugins/WorldMailAlerts.dll      (this mod)
 BepInEx/config/WorldMailAlerts_backgrounds/   (put your own images here)
 ```
@@ -84,6 +83,9 @@ Settings: press **F12** in game → **World Mail Alerts**.
 Updating from 1.x: replace `WorldMailAlerts.dll`. Your settings are kept.
 
 ## 📝 Changelog
+### 2.0.1
+- **No longer requires World Mail Countdown**: World Mail Alerts now works on its own. Both mods still work together.
+
 ### 2.0.0
 - **History window** (F9 or HISTORY button in the messenger): game-style window, movable and resizable, full timestamps, "This session" summary, filters, settings gear.
 - **Daily money graph**: money in (green) and spent (red), a dot with the amount on each one, Money in / Spent / Balance summary. Counts ₽, $, € and GP. Optional gold curve.
@@ -112,7 +114,7 @@ Updating from 1.x: replace `WorldMailAlerts.dll`. Your settings are kept.
 - **Graphique de la journée** (bouton **GRAPHIQUE**) : 🟢 **Rentrées** (tout l'argent qui entre dans ta planque) et 🔴 **Dépenses**, avec un point et le montant à chaque mouvement, plus un résumé Rentrées · Dépenses · Solde.
 - **Fonds d'écran** du jeu ou tes propres images, avec mouvements, et des dizaines de réglages d'apparence dans **F12**.
 
-**Nécessite [World Mail Countdown](https://sp-mod.com/mod/3310/world-mail-countdown-add-16-translations) 1.2.0 ou plus.** Menu et notifications entièrement en français (réglage **00. Langue**).
+**Fonctionne seul**, aucun autre mod requis. Se marie très bien avec [World Mail Countdown](https://sp-mod.com/mod/3310/world-mail-countdown-add-16-translations). Menu et notifications entièrement en français (réglage **00. Langue**).
 
 ## 🐞 Bugs
 Open an issue, or send me a private message on Discord: **PraED_tv**. Please attach your `BepInEx/LogOutput.log`.
