@@ -1,0 +1,441 @@
+@@pt
+on|Toca um som e mostra a notificação do jogo quando um correio com itens está prestes a expirar.
+vol|Volume dos alertas.
+icon|Ícone da notificação do jogo.
+move|Coloque a notificação onde quiser com os 2 controles deslizantes abaixo. Desligado = posição original.
+posx|-50 = extrema esquerda, 0 = centro, 50 = extrema direita.
+posy|-50 = embaixo, 0 = meio, 50 = em cima.
+preview|Mostra a notificação o tempo todo (a cada 5 s) para você posicioná-la. Arraste-a com o mouse. Desligue ao terminar.
+rainbow|O texto da notificação alterna entre cores.
+rbspeed|Ciclos de cor por segundo.
+raidsilent|Sem som nem notificação durante uma incursão.
+raidreplay|De volta ao menu, repete o alerta perdido mais urgente.
+blink|Mostra a notificação várias vezes, alternando duas cores.
+blinkcount|Quantas vezes ela é mostrada ao piscar.
+summary|Ao iniciar, uma notificação diz quantos correios expiram em breve.
+summaryhours|Conta os correios que expiram em menos destas horas.
+fontsize|0 = tamanho do jogo.
+fontstyle|Estilo do texto da notificação.
+mutegame|Silencia o som de notificação do jogo para as notificações deste mod.
+format|Como a mensagem é escrita.
+spacing|0 = normal.
+previewsound|Toca o som do alerta 1 em cada prévia de posição.
+active|Liga ou desliga este alerta.
+when|Dispara quando resta menos que este tempo.
+sound|Som deste alerta.
+rh|Repete enquanto o correio espera (horas + minutos + segundos). Tudo 0 = nunca.
+rm|De 0 a 59.
+rs|De 0 a 59.
+color|Cor do texto da notificação para este alerta.
+dir|Coloque arquivos .wav aqui e reinicie: eles aparecem nas listas de sons como Perso: ...
+opendir|Marque para abrir a pasta.
+test|Marque para tocar os 4 alertas um após o outro.
+listen|Escolha um som para ouvi-lo agora.
+duration|Default = duração do jogo, Long = fica mais tempo na tela.
+showtype|Adiciona o tipo de correio antes do texto: [Seguro], [Missão], [Mercado], [Encomenda], [BTR].
+fleaon|Mostra uma notificação quando uma de suas ofertas é vendida no mercado, com o item e o preço.
+histkey|Abre ou fecha o histórico das últimas 50 notificações (Escape também fecha).
+h_rowsize|Tamanho das linhas na janela de histórico. 0 = tamanho do jogo.
+h_sumsize|Tamanho do resumo "Esta sessão". 0 = tamanho padrão.
+h_sumstyle|Normal, Bold (negrito), Italic (itálico), BoldItalic ou Caps (maiúsculas).
+h_sumcolor|Cor do resumo "Esta sessão".
+h_alpha|1 = totalmente visível, 0.2 = muito transparente. Aplica-se à janela inteira.
+h_bgon|Marcado = a cor abaixo é usada no fundo da janela. Desmarcado = fundo do jogo.
+h_bgcolor|Cor de fundo. Seu alfa (A) define a transparência do fundo.
+h_rowstyle|Normal, Bold, Italic, BoldItalic ou Caps.
+h_rowcoloron|Desmarcado = cada linha mantém a cor da sua notificação.
+h_rowcolor|Cor usada quando a opção acima está marcada.
+h_datecolor|Cor da data e da hora.
+h_rainbow|As linhas do histórico alternam pelas cores do arco-íris.
+h_bgimage|None, suas imagens (BepInEx/config/WorldMailAlerts_backgrounds, .png/.jpg) ou fundos do jogo (Jeu:). Os fundos do jogo aparecem após a primeira abertura da janela, no próximo início.
+h_bgfit|Fill = cobre a janela inteira (bordas cortadas). Fit = imagem inteira (faixas). Stretch = preenche exatamente (distorcida). Center = tamanho real, centralizada.
+h_bgalpha|Transparência da imagem atrás da lista.
+h_bgmove|None, Slow (zoom e deriva), PanHorizontal, PanVertical, ZoomPulse, Diagonal, Circle, Breath, Shake.
+h_bgspeed|0.1 = muito lento, 1 = normal, 5 = rápido.
+h_rowformat|Como a data/hora e o texto ficam dispostos em cada linha. Ago = tempo desde a notificação.
+h_rowbg|0 = visual do jogo, 1 = totalmente preto. Mantém as linhas legíveis sobre uma imagem de fundo.
+h_bgzoom|1 = imagem inteira, até 4 = ampliada.
+h_bgoffx|-1 = parte esquerda, 0 = centro, 1 = parte direita (útil com zoom).
+h_bgoffy|-1 = parte de baixo, 0 = centro, 1 = parte de cima (útil com zoom).
+h_bgtint|Cor aplicada sobre a imagem. Branco = cores originais.
+h_chatbtn|Mostra o botão HISTÓRICO ao lado de AMIGOS no mensageiro. F9 continua funcionando sem ele.
+h_showgold|Adiciona a curva dourada: seu dinheiro no esconderijo (₽ $ € GP) desde o início do dia.
+lang|Idioma do menu e das notificações. Reinicie o jogo após mudar: as configurações são redefinidas ao trocar de idioma.
+@@cs
+on|Přehraje zvuk a zobrazí oznámení hry, když zpráva s předměty brzy vyprší.
+vol|Hlasitost upozornění.
+icon|Ikona oznámení hry.
+move|Umístěte oznámení, kam chcete, pomocí 2 posuvníků níže. Vyp. = původní místo.
+posx|-50 = úplně vlevo, 0 = střed, 50 = úplně vpravo.
+posy|-50 = dole, 0 = uprostřed, 50 = nahoře.
+preview|Zobrazuje oznámení neustále (každých 5 s), abyste ho mohli umístit. Přetáhněte ho myší. Po dokončení vypněte.
+rainbow|Text oznámení se mění v barvách.
+rbspeed|Cykly barev za sekundu.
+raidsilent|Během raidu žádný zvuk ani oznámení.
+raidreplay|Po návratu do menu přehraje nejnaléhavější zmeškané upozornění.
+blink|Zobrazí oznámení několikrát a střídá dvě barvy.
+blinkcount|Kolikrát se při blikání zobrazí.
+summary|Při spuštění jedno oznámení řekne, kolik zpráv brzy vyprší.
+summaryhours|Počítá zprávy, které vyprší za méně než tolik hodin.
+fontsize|0 = velikost hry.
+fontstyle|Styl textu oznámení.
+mutegame|Ztlumí zvuk oznámení hry pro oznámení tohoto modu.
+format|Jak je zpráva napsána.
+spacing|0 = normální.
+previewsound|Přehraje zvuk upozornění 1 při každém náhledu pozice.
+active|Zapne nebo vypne toto upozornění.
+when|Spustí se, když zbývá méně než tento čas.
+sound|Zvuk tohoto upozornění.
+rh|Opakuje, dokud zpráva čeká (hodiny + minuty + sekundy). Vše 0 = nikdy.
+rm|0 až 59.
+rs|0 až 59.
+color|Barva textu oznámení pro toto upozornění.
+dir|Vložte sem soubory .wav a restartujte: objeví se v seznamech zvuků jako Perso: ...
+opendir|Zaškrtněte pro otevření složky.
+test|Zaškrtněte pro přehrání 4 upozornění jedno po druhém.
+listen|Vyberte zvuk a hned ho uslyšíte.
+duration|Default = doba hry, Long = zůstane na obrazovce déle.
+showtype|Přidá před text druh zprávy: [Pojištění], [Úkol], [Bleší trh], [Balík], [BTR].
+fleaon|Zobrazí oznámení, když se některá z vašich nabídek prodá na bleším trhu, s předmětem a cenou.
+histkey|Otevře nebo zavře historii posledních 50 oznámení (Escape ji také zavře).
+h_rowsize|Velikost řádků v okně historie. 0 = velikost hry.
+h_sumsize|Velikost souhrnu „Tato relace“. 0 = výchozí velikost.
+h_sumstyle|Normal, Bold (tučně), Italic (kurzíva), BoldItalic nebo Caps (velká písmena).
+h_sumcolor|Barva souhrnu „Tato relace“.
+h_alpha|1 = plně viditelné, 0.2 = velmi průhledné. Platí pro celé okno.
+h_bgon|Zaškrtnuto = barva níže se použije pro pozadí okna. Nezaškrtnuto = pozadí hry.
+h_bgcolor|Barva pozadí. Její alfa (A) určuje průhlednost pozadí.
+h_rowstyle|Normal, Bold, Italic, BoldItalic nebo Caps.
+h_rowcoloron|Nezaškrtnuto = každý řádek si ponechá barvu svého oznámení.
+h_rowcolor|Barva použitá, když je zaškrtnuta volba výše.
+h_datecolor|Barva data a času.
+h_rainbow|Řádky historie se mění v barvách duhy.
+h_bgimage|None, vaše obrázky (BepInEx/config/WorldMailAlerts_backgrounds, .png/.jpg) nebo pozadí hry (Jeu:). Pozadí hry se objeví po prvním otevření okna, při dalším spuštění.
+h_bgfit|Fill = pokryje celé okno (okraje oříznuté). Fit = celý obrázek (pruhy). Stretch = vyplní přesně (zkreslené). Center = skutečná velikost, na střed.
+h_bgalpha|Průhlednost obrázku za seznamem.
+h_bgmove|None, Slow (zoom a posun), PanHorizontal, PanVertical, ZoomPulse, Diagonal, Circle, Breath, Shake.
+h_bgspeed|0.1 = velmi pomalu, 1 = normálně, 5 = rychle.
+h_rowformat|Jak jsou datum/čas a text uspořádány na každém řádku. Ago = čas od oznámení.
+h_rowbg|0 = vzhled hry, 1 = úplně černé. Řádky zůstanou čitelné i na obrázku pozadí.
+h_bgzoom|1 = celý obrázek, až 4 = přiblížený.
+h_bgoffx|-1 = levá část, 0 = střed, 1 = pravá část (užitečné se zoomem).
+h_bgoffy|-1 = spodní část, 0 = střed, 1 = horní část (užitečné se zoomem).
+h_bgtint|Barva použitá přes obrázek. Bílá = původní barvy.
+h_chatbtn|Zobrazí tlačítko HISTORIE vedle PŘÁTELÉ v messengeru. F9 funguje i bez něj.
+h_showgold|Přidá zlatou křivku: vaše peníze v úkrytu (₽ $ € GP) od začátku dne.
+lang|Jazyk menu a oznámení. Po změně restartujte hru: při změně jazyka se nastavení resetuje.
+@@tr
+on|Eşyalı bir posta süresi dolmak üzereyken ses çalar ve oyunun bildirimini gösterir.
+vol|Uyarı ses seviyesi.
+icon|Oyun bildiriminin simgesi.
+move|Bildirimi aşağıdaki 2 kaydırıcıyla istediğin yere koy. Kapalı = asıl yeri.
+posx|-50 = en sol, 0 = orta, 50 = en sağ.
+posy|-50 = alt, 0 = orta, 50 = üst.
+preview|Yerleştirebilmen için bildirimi sürekli gösterir (her 5 sn). Fareyle sürükle. Bitince kapat.
+rainbow|Bildirim yazısı renkler arasında döner.
+rbspeed|Saniyedeki renk döngüsü.
+raidsilent|Baskın sırasında ses ve bildirim yok.
+raidreplay|Menüye dönünce kaçırılan en acil uyarıyı tekrar oynatır.
+blink|Bildirimi iki rengi değiştirerek birkaç kez gösterir.
+blinkcount|Yanıp sönerken kaç kez gösterileceği.
+summary|Başlangıçta bir bildirim, kaç postanın yakında dolacağını söyler.
+summaryhours|Bu kadar saatten az sürede dolacak postaları sayar.
+fontsize|0 = oyun boyutu.
+fontstyle|Bildirim yazısının stili.
+mutegame|Bu modun bildirimleri için oyunun bildirim sesini kapatır.
+format|Mesajın nasıl yazılacağı.
+spacing|0 = normal.
+previewsound|Her konum önizlemesinde 1. uyarının sesini çalar.
+active|Bu uyarıyı açar veya kapatır.
+when|Bu süreden az kaldığında tetiklenir.
+sound|Bu uyarının sesi.
+rh|Posta beklerken tekrarlar (saat + dakika + saniye). Hepsi 0 = asla.
+rm|0 ile 59 arası.
+rs|0 ile 59 arası.
+color|Bu uyarı için bildirim yazısının rengi.
+dir|.wav dosyalarını buraya koy ve yeniden başlat: ses listelerinde Perso: ... olarak görünürler.
+opendir|Klasörü açmak için işaretle.
+test|4 uyarıyı art arda çalmak için işaretle.
+listen|Hemen dinlemek için bir ses seç.
+duration|Default = oyun süresi, Long = ekranda daha uzun kalır.
+showtype|Yazının önüne posta türünü ekler: [Sigorta], [Görev], [Bit pazarı], [Koli], [BTR].
+fleaon|Tekliflerinden biri bit pazarında satıldığında eşya ve fiyatla birlikte bildirim gösterir.
+histkey|Son 50 bildirimin geçmişini açar veya kapatır (Escape de kapatır).
+h_rowsize|Geçmiş penceresindeki satırların boyutu. 0 = oyun boyutu.
+h_sumsize|"Bu oturum" özetinin boyutu. 0 = varsayılan boyut.
+h_sumstyle|Normal, Bold (kalın), Italic (italik), BoldItalic veya Caps (büyük harf).
+h_sumcolor|"Bu oturum" özetinin rengi.
+h_alpha|1 = tamamen görünür, 0.2 = çok saydam. Tüm pencereye uygulanır.
+h_bgon|İşaretli = aşağıdaki renk pencere arka planı olarak kullanılır. İşaretsiz = oyunun arka planı.
+h_bgcolor|Arka plan rengi. Alfa (A) değeri arka planın saydamlığını belirler.
+h_rowstyle|Normal, Bold, Italic, BoldItalic veya Caps.
+h_rowcoloron|İşaretsiz = her satır kendi bildiriminin rengini korur.
+h_rowcolor|Yukarıdaki seçenek işaretliyken kullanılan renk.
+h_datecolor|Tarih ve saatin rengi.
+h_rainbow|Geçmiş satırları gökkuşağı renkleri arasında döner.
+h_bgimage|None, kendi resimlerin (BepInEx/config/WorldMailAlerts_backgrounds, .png/.jpg) veya oyun arka planları (Jeu:). Oyun arka planları, pencere ilk açıldıktan sonraki başlatmada listelenir.
+h_bgfit|Fill = tüm pencereyi kaplar (kenarlar kesilir). Fit = resmin tamamı (bantlar). Stretch = tam doldurur (bozulur). Center = gerçek boyut, ortada.
+h_bgalpha|Listenin arkasındaki resmin saydamlığı.
+h_bgmove|None, Slow (yakınlaştırma ve kayma), PanHorizontal, PanVertical, ZoomPulse, Diagonal, Circle, Breath, Shake.
+h_bgspeed|0.1 = çok yavaş, 1 = normal, 5 = hızlı.
+h_rowformat|Her satırda tarih/saat ve yazının nasıl dizileceği. Ago = bildirimden bu yana geçen süre.
+h_rowbg|0 = oyun görünümü, 1 = tamamen siyah. Satırları arka plan resminin üstünde okunur tutar.
+h_bgzoom|1 = resmin tamamı, 4'e kadar = yakınlaştırılmış.
+h_bgoffx|-1 = sol kısım, 0 = orta, 1 = sağ kısım (yakınlaştırmayla yararlı).
+h_bgoffy|-1 = alt kısım, 0 = orta, 1 = üst kısım (yakınlaştırmayla yararlı).
+h_bgtint|Resmin üzerine uygulanan renk. Beyaz = orijinal renkler.
+h_chatbtn|Mesajlaşmada ARKADAŞLAR'ın yanında GEÇMİŞ düğmesini gösterir. İşaretsizken de F9 çalışır.
+h_showgold|Altın eğriyi ekler: günün başından beri zuladaki paran (₽ $ € GP).
+lang|Menü ve bildirimlerin dili. Değiştirdikten sonra oyunu yeniden başlat: dil değişince ayarlar sıfırlanır.
+@@it
+on|Riproduce un suono e mostra la notifica del gioco quando una posta con oggetti sta per scadere.
+vol|Volume degli avvisi.
+icon|Icona della notifica del gioco.
+move|Posiziona la notifica dove vuoi con i 2 cursori qui sotto. Spento = posizione originale.
+posx|-50 = tutto a sinistra, 0 = centro, 50 = tutto a destra.
+posy|-50 = in basso, 0 = al centro, 50 = in alto.
+preview|Mostra sempre la notifica (ogni 5 s) per poterla posizionare. Trascinala con il mouse. Spegni quando hai finito.
+rainbow|Il testo della notifica cambia colore.
+rbspeed|Cicli di colore al secondo.
+raidsilent|Nessun suono né notifica durante un raid.
+raidreplay|Tornato al menu, ripete l'avviso perso più urgente.
+blink|Mostra la notifica più volte alternando due colori.
+blinkcount|Quante volte viene mostrata lampeggiando.
+summary|All'avvio, una notifica indica quante poste scadono presto.
+summaryhours|Conta le poste che scadono in meno di queste ore.
+fontsize|0 = dimensione del gioco.
+fontstyle|Stile del testo della notifica.
+mutegame|Silenzia il suono di notifica del gioco per le notifiche di questa mod.
+format|Come è scritto il messaggio.
+spacing|0 = normale.
+previewsound|Riproduce il suono dell'avviso 1 a ogni anteprima di posizione.
+active|Attiva o disattiva questo avviso.
+when|Scatta quando resta meno di questo tempo.
+sound|Suono di questo avviso.
+rh|Ripete finché la posta attende (ore + minuti + secondi). Tutto 0 = mai.
+rm|Da 0 a 59.
+rs|Da 0 a 59.
+color|Colore del testo della notifica per questo avviso.
+dir|Metti qui i file .wav e riavvia: compaiono negli elenchi dei suoni come Perso: ...
+opendir|Spunta per aprire la cartella.
+test|Spunta per riprodurre i 4 avvisi uno dopo l'altro.
+listen|Scegli un suono per ascoltarlo subito.
+duration|Default = durata del gioco, Long = resta più a lungo sullo schermo.
+showtype|Aggiunge il tipo di posta prima del testo: [Assicurazione], [Missione], [Mercatino], [Pacco], [BTR].
+fleaon|Mostra una notifica quando una tua offerta viene venduta al mercatino, con l'oggetto e il prezzo.
+histkey|Apre o chiude la cronologia delle ultime 50 notifiche (anche Escape la chiude).
+h_rowsize|Dimensione delle righe nella finestra della cronologia. 0 = dimensione del gioco.
+h_sumsize|Dimensione del riepilogo «Questa sessione». 0 = dimensione predefinita.
+h_sumstyle|Normal, Bold (grassetto), Italic (corsivo), BoldItalic o Caps (maiuscole).
+h_sumcolor|Colore del riepilogo «Questa sessione».
+h_alpha|1 = completamente visibile, 0.2 = molto trasparente. Vale per tutta la finestra.
+h_bgon|Spuntato = il colore qui sotto è usato per lo sfondo della finestra. Non spuntato = sfondo del gioco.
+h_bgcolor|Colore di sfondo. Il suo alfa (A) imposta la trasparenza dello sfondo.
+h_rowstyle|Normal, Bold, Italic, BoldItalic o Caps.
+h_rowcoloron|Non spuntato = ogni riga mantiene il colore della sua notifica.
+h_rowcolor|Colore usato quando l'opzione sopra è spuntata.
+h_datecolor|Colore della data e dell'ora.
+h_rainbow|Le righe della cronologia cambiano con i colori dell'arcobaleno.
+h_bgimage|None, le tue immagini (BepInEx/config/WorldMailAlerts_backgrounds, .png/.jpg) o sfondi del gioco (Jeu:). Gli sfondi del gioco compaiono dopo la prima apertura della finestra, all'avvio successivo.
+h_bgfit|Fill = copre tutta la finestra (bordi tagliati). Fit = immagine intera (bande). Stretch = riempie esattamente (deformata). Center = dimensione reale, centrata.
+h_bgalpha|Trasparenza dell'immagine dietro l'elenco.
+h_bgmove|None, Slow (zoom e deriva), PanHorizontal, PanVertical, ZoomPulse, Diagonal, Circle, Breath, Shake.
+h_bgspeed|0.1 = molto lento, 1 = normale, 5 = veloce.
+h_rowformat|Come data/ora e testo sono disposti su ogni riga. Ago = tempo trascorso dalla notifica.
+h_rowbg|0 = aspetto del gioco, 1 = completamente nero. Mantiene le righe leggibili su un'immagine di sfondo.
+h_bgzoom|1 = immagine intera, fino a 4 = ingrandita.
+h_bgoffx|-1 = parte sinistra, 0 = centro, 1 = parte destra (utile con lo zoom).
+h_bgoffy|-1 = parte bassa, 0 = centro, 1 = parte alta (utile con lo zoom).
+h_bgtint|Colore applicato sopra l'immagine. Bianco = colori originali.
+h_chatbtn|Mostra il pulsante CRONOLOGIA accanto ad AMICI nella messaggistica. F9 funziona anche senza.
+h_showgold|Aggiunge la curva dorata: i tuoi soldi nel nascondiglio (₽ $ € GP) dall'inizio della giornata.
+lang|Lingua del menu e delle notifiche. Riavvia il gioco dopo averla cambiata: le impostazioni vengono azzerate al cambio di lingua.
+@@hu
+on|Hangot játszik le és megjeleníti a játék értesítését, amikor egy tárgyakat tartalmazó levél hamarosan lejár.
+vol|A figyelmeztetések hangereje.
+icon|A játékértesítés ikonja.
+move|Helyezd az értesítést, ahová szeretnéd, az alábbi 2 csúszkával. Ki = eredeti hely.
+posx|-50 = bal szél, 0 = közép, 50 = jobb szél.
+posy|-50 = lent, 0 = középen, 50 = fent.
+preview|Folyamatosan mutatja az értesítést (5 mp-enként), hogy elhelyezhesd. Húzd az egérrel. Ha kész, kapcsold ki.
+rainbow|Az értesítés szövege színeket vált.
+rbspeed|Színciklus másodpercenként.
+raidsilent|Nincs hang és értesítés raid közben.
+raidreplay|A menübe visszatérve lejátssza a legsürgősebb elmulasztott figyelmeztetést.
+blink|Többször megmutatja az értesítést, két színt váltogatva.
+blinkcount|Hányszor jelenik meg villogáskor.
+summary|Induláskor egy értesítés megmondja, hány levél jár le hamarosan.
+summaryhours|Azokat a leveleket számolja, amelyek ennyi óránál hamarabb lejárnak.
+fontsize|0 = játék mérete.
+fontstyle|Az értesítés szövegének stílusa.
+mutegame|Elnémítja a játék értesítési hangját a mod értesítéseinél.
+format|Hogyan van megírva az üzenet.
+spacing|0 = normál.
+previewsound|Minden pozíció-előnézetnél lejátssza az 1. figyelmeztetés hangját.
+active|Be- vagy kikapcsolja ezt a figyelmeztetést.
+when|Akkor lép működésbe, ha ennél kevesebb idő maradt.
+sound|Ennek a figyelmeztetésnek a hangja.
+rh|Ismétli, amíg a levél vár (óra + perc + másodperc). Mind 0 = soha.
+rm|0-tól 59-ig.
+rs|0-tól 59-ig.
+color|Az értesítés szövegének színe ennél a figyelmeztetésnél.
+dir|Tegyél ide .wav fájlokat és indítsd újra: Perso: ... néven jelennek meg a hanglistákban.
+opendir|Jelöld be a mappa megnyitásához.
+test|Jelöld be a 4 figyelmeztetés egymás utáni lejátszásához.
+listen|Válassz egy hangot, hogy azonnal meghalld.
+duration|Default = játék időtartama, Long = tovább marad a képernyőn.
+showtype|A szöveg elé írja a levél típusát: [Biztosítás], [Küldetés], [Bolhapiac], [Csomag], [BTR].
+fleaon|Értesítést mutat, amikor valamelyik ajánlatod elkel a bolhapiacon, a tárggyal és az árral.
+histkey|Megnyitja vagy bezárja az utolsó 50 értesítés előzményeit (az Escape is bezárja).
+h_rowsize|A sorok mérete az előzmények ablakban. 0 = játék mérete.
+h_sumsize|Az „Ez a munkamenet” összegzés mérete. 0 = alapméret.
+h_sumstyle|Normal, Bold (félkövér), Italic (dőlt), BoldItalic vagy Caps (nagybetűk).
+h_sumcolor|Az „Ez a munkamenet” összegzés színe.
+h_alpha|1 = teljesen látható, 0.2 = nagyon átlátszó. Az egész ablakra vonatkozik.
+h_bgon|Bejelölve = az alábbi szín lesz az ablak háttere. Nincs bejelölve = a játék háttere.
+h_bgcolor|Háttérszín. Az alfája (A) adja meg a háttér átlátszóságát.
+h_rowstyle|Normal, Bold, Italic, BoldItalic vagy Caps.
+h_rowcoloron|Nincs bejelölve = minden sor megtartja az értesítése színét.
+h_rowcolor|A szín, amikor a fenti lehetőség be van jelölve.
+h_datecolor|A dátum és az idő színe.
+h_rainbow|Az előzmények sorai a szivárvány színeit váltogatják.
+h_bgimage|None, a saját képeid (BepInEx/config/WorldMailAlerts_backgrounds, .png/.jpg) vagy a játék hátterei (Jeu:). A játék hátterei az ablak első megnyitása után, a következő indításkor jelennek meg.
+h_bgfit|Fill = az egész ablakot kitölti (a szélek levágva). Fit = a teljes kép (sávok). Stretch = pontosan kitölti (torzítva). Center = valós méret, középen.
+h_bgalpha|A lista mögötti kép átlátszósága.
+h_bgmove|None, Slow (nagyítás és sodródás), PanHorizontal, PanVertical, ZoomPulse, Diagonal, Circle, Breath, Shake.
+h_bgspeed|0.1 = nagyon lassú, 1 = normál, 5 = gyors.
+h_rowformat|Hogyan helyezkedik el a dátum/idő és a szöveg minden sorban. Ago = az értesítés óta eltelt idő.
+h_rowbg|0 = játék kinézete, 1 = teljesen fekete. A sorok egy háttérkép fölött is olvashatók maradnak.
+h_bgzoom|1 = teljes kép, legfeljebb 4 = nagyítva.
+h_bgoffx|-1 = bal rész, 0 = közép, 1 = jobb rész (nagyítással hasznos).
+h_bgoffy|-1 = alsó rész, 0 = közép, 1 = felső rész (nagyítással hasznos).
+h_bgtint|A képre helyezett szín. Fehér = eredeti színek.
+h_chatbtn|Megjeleníti az ELŐZMÉNYEK gombot a BARÁTOK mellett az üzenetküldőben. Az F9 enélkül is működik.
+h_showgold|Hozzáadja az arany görbét: a pénzed a rejtekhelyen (₽ $ € GP) a nap kezdete óta.
+lang|A menü és az értesítések nyelve. Módosítás után indítsd újra a játékot: nyelvváltáskor a beállítások visszaállnak.
+@@ro
+on|Redă un sunet și afișează notificarea jocului când un mesaj cu obiecte este pe cale să expire.
+vol|Volumul alertelor.
+icon|Pictograma notificării jocului.
+move|Plasează notificarea unde vrei cu cele 2 glisoare de mai jos. Oprit = locul original.
+posx|-50 = complet stânga, 0 = centru, 50 = complet dreapta.
+posy|-50 = jos, 0 = mijloc, 50 = sus.
+preview|Afișează notificarea tot timpul (la fiecare 5 s) ca s-o poți plasa. Trage-o cu mouse-ul. Oprește când ai terminat.
+rainbow|Textul notificării trece prin culori.
+rbspeed|Cicluri de culoare pe secundă.
+raidsilent|Fără sunet și notificare în timpul unui raid.
+raidreplay|Înapoi în meniu, redă cea mai urgentă alertă ratată.
+blink|Afișează notificarea de mai multe ori, alternând două culori.
+blinkcount|De câte ori este afișată când clipește.
+summary|La pornire, o notificare spune câte mesaje expiră curând.
+summaryhours|Numără mesajele care expiră în mai puțin de atâtea ore.
+fontsize|0 = mărimea jocului.
+fontstyle|Stilul textului notificării.
+mutegame|Oprește sunetul de notificare al jocului pentru notificările acestui mod.
+format|Cum este scris mesajul.
+spacing|0 = normal.
+previewsound|Redă sunetul alertei 1 la fiecare previzualizare a poziției.
+active|Pornește sau oprește această alertă.
+when|Se declanșează când rămâne mai puțin decât acest timp.
+sound|Sunetul acestei alerte.
+rh|Se repetă cât timp mesajul așteaptă (ore + minute + secunde). Toate 0 = niciodată.
+rm|De la 0 la 59.
+rs|De la 0 la 59.
+color|Culoarea textului notificării pentru această alertă.
+dir|Pune aici fișiere .wav și repornește: apar în listele de sunete ca Perso: ...
+opendir|Bifează pentru a deschide dosarul.
+test|Bifează pentru a reda cele 4 alerte una după alta.
+listen|Alege un sunet ca să-l auzi acum.
+duration|Default = durata jocului, Long = rămâne mai mult pe ecran.
+showtype|Adaugă tipul mesajului înaintea textului: [Asigurare], [Misiune], [Talcioc], [Colet], [BTR].
+fleaon|Afișează o notificare când una dintre ofertele tale se vinde la talcioc, cu obiectul și prețul.
+histkey|Deschide sau închide istoricul ultimelor 50 de notificări (și Escape îl închide).
+h_rowsize|Mărimea rândurilor din fereastra istoricului. 0 = mărimea jocului.
+h_sumsize|Mărimea rezumatului „Această sesiune”. 0 = mărimea implicită.
+h_sumstyle|Normal, Bold (îngroșat), Italic (cursiv), BoldItalic sau Caps (majuscule).
+h_sumcolor|Culoarea rezumatului „Această sesiune”.
+h_alpha|1 = complet vizibil, 0.2 = foarte transparent. Se aplică întregii ferestre.
+h_bgon|Bifat = culoarea de mai jos este folosită pentru fundalul ferestrei. Nebifat = fundalul jocului.
+h_bgcolor|Culoarea fundalului. Alfa (A) stabilește transparența fundalului.
+h_rowstyle|Normal, Bold, Italic, BoldItalic sau Caps.
+h_rowcoloron|Nebifat = fiecare rând păstrează culoarea notificării sale.
+h_rowcolor|Culoarea folosită când opțiunea de mai sus este bifată.
+h_datecolor|Culoarea datei și orei.
+h_rainbow|Rândurile istoricului trec prin culorile curcubeului.
+h_bgimage|None, imaginile tale (BepInEx/config/WorldMailAlerts_backgrounds, .png/.jpg) sau fundaluri ale jocului (Jeu:). Fundalurile jocului apar după prima deschidere a ferestrei, la următoarea pornire.
+h_bgfit|Fill = acoperă toată fereastra (margini tăiate). Fit = imaginea întreagă (benzi). Stretch = umple exact (deformată). Center = mărime reală, centrată.
+h_bgalpha|Transparența imaginii din spatele listei.
+h_bgmove|None, Slow (zoom și deplasare), PanHorizontal, PanVertical, ZoomPulse, Diagonal, Circle, Breath, Shake.
+h_bgspeed|0.1 = foarte lent, 1 = normal, 5 = rapid.
+h_rowformat|Cum sunt așezate data/ora și textul pe fiecare rând. Ago = timpul de la notificare.
+h_rowbg|0 = aspectul jocului, 1 = complet negru. Păstrează rândurile lizibile peste o imagine de fundal.
+h_bgzoom|1 = imaginea întreagă, până la 4 = mărită.
+h_bgoffx|-1 = partea stângă, 0 = centru, 1 = partea dreaptă (util cu zoom).
+h_bgoffy|-1 = partea de jos, 0 = centru, 1 = partea de sus (util cu zoom).
+h_bgtint|Culoarea aplicată peste imagine. Alb = culorile originale.
+h_chatbtn|Afișează butonul ISTORIC lângă PRIETENI în mesagerie. F9 funcționează și fără el.
+h_showgold|Adaugă curba aurie: banii tăi din ascunzătoare (₽ $ € GP) de la începutul zilei.
+lang|Limba meniului și a notificărilor. Repornește jocul după schimbare: setările se resetează la schimbarea limbii.
+@@sk
+on|Prehrá zvuk a zobrazí oznámenie hry, keď správa s predmetmi čoskoro vyprší.
+vol|Hlasitosť upozornení.
+icon|Ikona oznámenia hry.
+move|Umiestnite oznámenie, kam chcete, pomocou 2 posúvačov nižšie. Vyp. = pôvodné miesto.
+posx|-50 = úplne vľavo, 0 = stred, 50 = úplne vpravo.
+posy|-50 = dole, 0 = v strede, 50 = hore.
+preview|Zobrazuje oznámenie neustále (každých 5 s), aby ste ho mohli umiestniť. Potiahnite ho myšou. Po dokončení vypnite.
+rainbow|Text oznámenia sa mení vo farbách.
+rbspeed|Cykly farieb za sekundu.
+raidsilent|Počas raidu žiadny zvuk ani oznámenie.
+raidreplay|Po návrate do menu prehrá najnaliehavejšie zmeškané upozornenie.
+blink|Zobrazí oznámenie niekoľkokrát a strieda dve farby.
+blinkcount|Koľkokrát sa pri blikaní zobrazí.
+summary|Pri spustení jedno oznámenie povie, koľko správ čoskoro vyprší.
+summaryhours|Počíta správy, ktoré vypršia za menej ako toľko hodín.
+fontsize|0 = veľkosť hry.
+fontstyle|Štýl textu oznámenia.
+mutegame|Stlmí zvuk oznámenia hry pre oznámenia tohto modu.
+format|Ako je správa napísaná.
+spacing|0 = normálne.
+previewsound|Prehrá zvuk upozornenia 1 pri každom náhľade pozície.
+active|Zapne alebo vypne toto upozornenie.
+when|Spustí sa, keď zostáva menej ako tento čas.
+sound|Zvuk tohto upozornenia.
+rh|Opakuje, kým správa čaká (hodiny + minúty + sekundy). Všetko 0 = nikdy.
+rm|0 až 59.
+rs|0 až 59.
+color|Farba textu oznámenia pre toto upozornenie.
+dir|Vložte sem súbory .wav a reštartujte: objavia sa v zoznamoch zvukov ako Perso: ...
+opendir|Začiarknite na otvorenie priečinka.
+test|Začiarknite na prehranie 4 upozornení jedno po druhom.
+listen|Vyberte zvuk a hneď ho začujete.
+duration|Default = trvanie hry, Long = zostane na obrazovke dlhšie.
+showtype|Pridá pred text druh správy: [Poistenie], [Úloha], [Blší trh], [Balík], [BTR].
+fleaon|Zobrazí oznámenie, keď sa niektorá z vašich ponúk predá na blšom trhu, s predmetom a cenou.
+histkey|Otvorí alebo zatvorí históriu posledných 50 oznámení (Escape ju tiež zatvorí).
+h_rowsize|Veľkosť riadkov v okne histórie. 0 = veľkosť hry.
+h_sumsize|Veľkosť súhrnu „Táto relácia“. 0 = predvolená veľkosť.
+h_sumstyle|Normal, Bold (tučné), Italic (kurzíva), BoldItalic alebo Caps (veľké písmená).
+h_sumcolor|Farba súhrnu „Táto relácia“.
+h_alpha|1 = úplne viditeľné, 0.2 = veľmi priehľadné. Platí pre celé okno.
+h_bgon|Začiarknuté = farba nižšie sa použije pre pozadie okna. Nezačiarknuté = pozadie hry.
+h_bgcolor|Farba pozadia. Jej alfa (A) určuje priehľadnosť pozadia.
+h_rowstyle|Normal, Bold, Italic, BoldItalic alebo Caps.
+h_rowcoloron|Nezačiarknuté = každý riadok si ponechá farbu svojho oznámenia.
+h_rowcolor|Farba použitá, keď je začiarknutá voľba vyššie.
+h_datecolor|Farba dátumu a času.
+h_rainbow|Riadky histórie sa menia vo farbách dúhy.
+h_bgimage|None, vaše obrázky (BepInEx/config/WorldMailAlerts_backgrounds, .png/.jpg) alebo pozadia hry (Jeu:). Pozadia hry sa objavia po prvom otvorení okna, pri ďalšom spustení.
+h_bgfit|Fill = pokryje celé okno (okraje orezané). Fit = celý obrázok (pruhy). Stretch = vyplní presne (skreslené). Center = skutočná veľkosť, na stred.
+h_bgalpha|Priehľadnosť obrázka za zoznamom.
+h_bgmove|None, Slow (zoom a posun), PanHorizontal, PanVertical, ZoomPulse, Diagonal, Circle, Breath, Shake.
+h_bgspeed|0.1 = veľmi pomaly, 1 = normálne, 5 = rýchlo.
+h_rowformat|Ako sú dátum/čas a text usporiadané v každom riadku. Ago = čas od oznámenia.
+h_rowbg|0 = vzhľad hry, 1 = úplne čierne. Riadky zostanú čitateľné aj na obrázku pozadia.
+h_bgzoom|1 = celý obrázok, až 4 = priblížený.
+h_bgoffx|-1 = ľavá časť, 0 = stred, 1 = pravá časť (užitočné so zoomom).
+h_bgoffy|-1 = spodná časť, 0 = stred, 1 = horná časť (užitočné so zoomom).
+h_bgtint|Farba nanesená na obrázok. Biela = pôvodné farby.
+h_chatbtn|Zobrazí tlačidlo HISTÓRIA vedľa PRIATELIA v messengeri. F9 funguje aj bez neho.
+h_showgold|Pridá zlatú krivku: vaše peniaze v úkryte (₽ $ € GP) od začiatku dňa.
+lang|Jazyk menu a oznámení. Po zmene reštartujte hru: pri zmene jazyka sa nastavenia resetujú.
