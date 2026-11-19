@@ -1,8 +1,8 @@
-# 📬 World Mail Alerts 2.0.1
+# 📬 World Mail Alerts 2.0.3
 
 **Never lose a mail with items again, and keep track of everything your mail brings in.** A BepInEx plugin for SPT 4.1.x that warns you with a sound and the game's own notification when a mail with items is about to expire, shows your flea market sales with their price, and adds a **history window** with a **daily money graph**, built from the game's own interface. Menu and notifications in 16 languages.
 
-![version](https://img.shields.io/badge/version-2.0.1-blue) ![SPT](https://img.shields.io/badge/SPT-4.1.x-green) ![license](https://img.shields.io/badge/license-MIT-lightgrey)
+![version](https://img.shields.io/badge/version-2.0.3-blue) ![SPT](https://img.shields.io/badge/SPT-4.1.x-green) ![license](https://img.shields.io/badge/license-MIT-lightgrey)
 
 ![Daily money graph](screenshots/graph.png)
 
@@ -41,8 +41,8 @@ Click **CHART** in the history window title bar.
 - 🔴 **Spent**: all the money that leaves your stash (purchases, insurance, repairs…).
 - **A dot with the amount** on each money in (`+194k`, above the line) and each spending (`-5k`, below the line).
 - Summary at the top: **Money in · Spent · Balance** for the day.
-- Counts **₽, $, € and GP coins** in your stash, converted to roubles. Optional gold curve: your total money since the start of the day (setting "Show the money curve").
-- 14 days of data are kept, then deleted automatically.
+- Counts **₽, $, € and GP coins** in your stash and on your character, converted to roubles. Optional gold curve: your total money over the selected period (setting "Show the money curve").
+- **Today / 7 days / 30 days** buttons. 31 days of data are kept, then deleted automatically.
 
 ### 🎨 Make it yours (F12 → History window)
 - Window background color and opacity.
@@ -83,6 +83,14 @@ Settings: press **F12** in game → **World Mail Alerts**.
 Updating from 1.x: replace `WorldMailAlerts.dll`. Your settings are kept.
 
 ## 📝 Changelog
+### 2.0.3
+- 📈 **Money graph: Today / 7 days / 30 days** buttons. In 7 and 30 days, one marker per day with that day's total. 31 days of data kept.
+- 📈 **More accurate numbers**: money carried on your character now counts too (moving cash between stash and backpack is no longer counted as money in / spent), and gaps between game sessions are ignored.
+- 📈 **More readable graph**: thicker lines, bigger bold numbers with an outline, only the meaningful amounts shown, gold balance line always drawn on top.
+- 🪟 **"Clear" no longer shrinks the window**: the window and the graph keep their size.
+- 🔘 **Filters more visible** (bigger, bold, active filter in gold).
+- 🔊 **Custom .wav sounds no longer go silent after a raid** (the sound is reloaded if the game emptied it).
+
 ### 2.0.1
 - **No longer requires World Mail Countdown**: World Mail Alerts now works on its own. Both mods still work together.
 
@@ -113,6 +121,14 @@ Updating from 1.x: replace `WorldMailAlerts.dll`. Your settings are kept.
 - **Fenêtre HISTORIQUE** (touche **F9** ou bouton **HISTORIQUE** dans la messagerie) : dans le style du jeu, déplaçable et redimensionnable, avec la date et l'heure de chaque alerte, le résumé « Cette session » et des **filtres** (Tous · Marché · Assurance · Quête · Colis · BTR).
 - **Graphique de la journée** (bouton **GRAPHIQUE**) : 🟢 **Rentrées** (tout l'argent qui entre dans ta planque) et 🔴 **Dépenses**, avec un point et le montant à chaque mouvement, plus un résumé Rentrées · Dépenses · Solde.
 - **Fonds d'écran** du jeu ou tes propres images, avec mouvements, et des dizaines de réglages d'apparence dans **F12**.
+
+**Nouveau en 2.0.3 :**
+- **Graphique : Aujourd'hui / 7 jours / 30 jours**. En 7 et 30 jours, un repère par jour avec le total de la journée. 31 jours gardés.
+- **Chiffres plus justes** : l'argent porté sur ton personnage compte aussi (déplacer ton argent entre le coffre et ton sac n'est plus compté en rentrée ou en dépense), et les trous entre deux sessions sont ignorés.
+- **Graphique plus lisible** : traits plus épais, chiffres plus gros en gras avec contour, seuls les montants importants affichés, ligne dorée du solde toujours au premier plan.
+- **« Vider » ne rétrécit plus la fenêtre** : la fenêtre et le graphique gardent leur taille.
+- **Filtres plus visibles** (plus gros, en gras, filtre actif en doré).
+- **Les sons .wav perso ne deviennent plus muets après un raid.**
 
 **Fonctionne seul**, aucun autre mod requis. Se marie très bien avec [World Mail Countdown](https://sp-mod.com/mod/3310/world-mail-countdown-add-16-translations). Menu et notifications entièrement en français (réglage **00. Langue**).
 

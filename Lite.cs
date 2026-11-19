@@ -13,7 +13,7 @@ using UnityEngine;
 namespace MailCountdown
 {
     // Alertes sonores + notification native du jeu. Independant : fonctionne seul ou avec World Mail Countdown.
-    [BepInPlugin("praedlab.mailalerts", "World Mail Alerts", "2.0.1")]
+    [BepInPlugin("praedlab.mailalerts", "World Mail Alerts", "2.0.3")]
     public class MailAlerts : BaseUnityPlugin
     {
         static ManualLogSource Log;
@@ -86,6 +86,7 @@ namespace MailCountdown
             if (!WavLoader.TryLoad(path, out data, out ch, out rate, out err))
             { Log.LogWarning("Son perso '" + Path.GetFileName(path) + "' ignore : " + err); return null; }
             var clip = AudioClip.Create("mailalert_" + name, data.Length / ch, ch, rate, false);
+            clip.hideFlags = HideFlags.DontUnloadUnusedAsset;
             clip.SetData(data, 0);
             return clip;
         }
@@ -269,6 +270,7 @@ namespace MailCountdown
             HistoryUI.cfgRowBg.SettingChanged += (o, e) => HistoryUI.Relayout();
             HistoryUI.cfgChatBtn = Config.Bind(H, K(25, "h_chatbtn"), true, D("h_chatbtn"));
             MoneyGraph.cfgShowGold = Config.Bind(H, K(26, "h_showgold"), false, D("h_showgold"));
+            MoneyGraph.cfgShowGold.SettingChanged += (o, e) => { try { if (MoneyGraph.Visible) MoneyGraph.Draw(); } catch { } };
             HistoryUI.cfgRowSize.SettingChanged += (o, e) => HistoryUI.Relayout();
             HistoryUI.cfgSumSize.SettingChanged += (o, e) => HistoryUI.Relayout();
             string W = Sec(9, "sec_sounds");
@@ -319,10 +321,23 @@ namespace MailCountdown
         static int playLogged;
         static void EnsureSrc()
         {
-            if (src != null || inst == null) return;
-            src = inst.gameObject.AddComponent<AudioSource>();
+            if (src == null)
+            {
+                if (inst == null) return;
+                src = inst.gameObject.AddComponent<AudioSource>();
+            }
             src.playOnAwake = false; src.spatialBlend = 0f; src.volume = 1f; src.priority = 0;
             src.ignoreListenerPause = true; src.bypassListenerEffects = true; src.bypassEffects = true; src.bypassReverbZones = true;
+            src.enabled = true; src.mute = false; src.UnPause();
+        }
+        static void PlayClipRecovered(AudioSource s0, AudioClip c, float v) { EnsureSrc(); if (src != null) src.PlayOneShot(c, v); }
+        // un son encore en memoire mais vide (duree 0 apres un raid) n'est plus reutilise : on recharge le WAV
+        static bool CachedClipUsable(AudioClip c) { return c != null && c.length > 0f; }
+        static UnityEngine.Object[] FindNotificationObjects(Type t)
+        {
+            var a = UnityEngine.Object.FindObjectsOfType(t, true);
+            if (a != null && a.Length != 0) return a;
+            return Resources.FindObjectsOfTypeAll(t);
         }
 
         static void Play(string name, float vol)
@@ -331,15 +346,15 @@ namespace MailCountdown
             EnsureSrc();
             if (src == null) { Log.LogWarning("Son : pas de source audio"); return; }
             AudioClip c;
-            if (!clips.TryGetValue(name, out c) && name.StartsWith(CustomPrefix)) { c = LoadCustom(name); clips[name] = c; }
-            if (c != null) { src.PlayOneShot(c, Mathf.Clamp01(vol)); if (playLogged++ < 5) Log.LogInfo("Son joue : " + name + " (" + c.length.ToString("0.0") + " s)"); return; }
+            if (!(clips.TryGetValue(name, out c) & CachedClipUsable(c)) && name.StartsWith(CustomPrefix)) { c = LoadCustom(name); clips[name] = c; }
+            if (c != null) { PlayClipRecovered(src, c, Mathf.Clamp01(vol)); if (playLogged++ < 5) Log.LogInfo("Son joue : " + name + " (" + c.length.ToString("0.0") + " s)"); return; }
             if (name.StartsWith(CustomPrefix))
             {
                 // fichier illisible : on joue un son du mod a la place plutot que le silence
                 Log.LogWarning("Son perso illisible ou introuvable : " + name + " -> Soft ping");
                 name = "Soft ping";
                 if (!clips.TryGetValue(name, out c)) c = null;
-                if (c != null) { src.PlayOneShot(c, Mathf.Clamp01(vol)); return; }
+                if (c != null) { PlayClipRecovered(src, c, Mathf.Clamp01(vol)); return; }
             }
             wantPlay[name] = Time.realtimeSinceStartup;
             if (rendering.Contains(name)) return;
@@ -364,6 +379,7 @@ namespace MailCountdown
                     if (kv.Value != null)
                     {
                         var clip = AudioClip.Create("mailalert_" + kv.Key, kv.Value.Length, 1, Synth.SR, false);
+                        clip.hideFlags = HideFlags.DontUnloadUnusedAsset;
                         clip.SetData(kv.Value, 0);
                         clips[kv.Key] = clip;
                     }
@@ -373,7 +389,7 @@ namespace MailCountdown
                         wantPlay.Remove(kv.Key);
                         AudioClip c;
                         if (Time.realtimeSinceStartup - t < 10f && clips.TryGetValue(kv.Key, out c) && c != null && src != null)
-                            src.PlayOneShot(c, Mathf.Clamp01(cfgVol.Value));
+                            PlayClipRecovered(src, c, Mathf.Clamp01(cfgVol.Value));
                     }
                 }
                 catch { }
@@ -937,6 +953,7 @@ namespace MailCountdown
             {
                 var dm = o as ChatShared.DialogueChatMessage;
                 if (dm == null) return;
+                if (saleSeen.Contains(dm._id ?? dm.GetHashCode().ToString())) return;
                 bool hasSold = dm.systemData != null && !string.IsNullOrEmpty(dm.systemData.soldItem);
                 bool isSale = dm.Type == ChatShared.EMessageType.FleamarketMessage || dm.Type == ChatShared.EMessageType.AuctionMessage || hasSold;
                 // pas de "vente" ecrite dans le message, mais le jeu vient d'annoncer une vente : on regarde si c'est de l'argent
@@ -1376,7 +1393,7 @@ namespace MailCountdown
                 findTries++;
                 var t = tNotifier ?? (tNotifier = AccessTools.TypeByName("EFT.UI.NotifierView"));
                 if (t == null) return;
-                var objs = Resources.FindObjectsOfTypeAll(t);
+                var objs = FindNotificationObjects(t);
                 Component nv = null;
                 if (objs != null)
                     foreach (var o in objs)
@@ -1394,7 +1411,7 @@ namespace MailCountdown
                 {
                     // plan B : une notification affichee -> on deplace le conteneur qui la porte
                     var bt = tBaseNotif ?? (tBaseNotif = AccessTools.TypeByName("EFT.UI.BaseNotificationView"));
-                    var vs = bt != null ? Resources.FindObjectsOfTypeAll(bt) : null;
+                    var vs = bt != null ? FindNotificationObjects(bt) : null;
                     if (vs != null)
                         foreach (var o in vs)
                         {
@@ -1609,11 +1626,7 @@ namespace MailCountdown
                     if (guiHost == null) { guiHost = gameObject.AddComponent<GuiHost>(); guiHost.p = this; guiHost.enabled = false; }
                     if (guiHost.enabled != showHistory) guiHost.enabled = showHistory;
                 }
-                if (src == null)
-                {
-                    src = gameObject.AddComponent<AudioSource>();
-                    src.playOnAwake = false; src.spatialBlend = 0f;
-                }
+                if (src == null) EnsureSrc();
                 Drain();
                 if (cfgTest.Value) { cfgTest.Value = false; StartCoroutine(TestRoutine()); }
                 if (pendingListen.Length > 0) { string p = pendingListen; pendingListen = ""; Play(p, cfgVol.Value); }

@@ -39,7 +39,13 @@ namespace MailCountdown
             if (window != null && window.activeSelf) Refresh();
         }
 
-        public static void Clear() { Load(); entries.Clear(); rowsDirty = true; Save(); if (window != null && window.activeSelf) Refresh(); }
+        public static void Clear()
+        {
+            // la fenetre garde exactement sa taille et sa place quand on vide
+            Vector2 keepSz = panel != null ? panel.sizeDelta : Vector2.zero, keepPos = panel != null ? panel.anchoredPosition : Vector2.zero;
+            try { Load(); entries.Clear(); rowsDirty = true; Save(); if (window != null && window.activeSelf) Refresh(); }
+            finally { if (panel != null) { panel.sizeDelta = keepSz; panel.anchoredPosition = keepPos; } try { if (MoneyGraph.Visible) MoneyGraph.Draw(); } catch { } }
+        }
 
         static void Load()
         {
@@ -442,9 +448,9 @@ namespace MailCountdown
                 var row = new GameObject("WMA_Filters", typeof(RectTransform));
                 row.transform.SetParent(listParent, false);
                 var hl = row.AddComponent<HorizontalLayoutGroup>();
-                hl.spacing = 4f; hl.childAlignment = TextAnchor.MiddleCenter; hl.padding = new RectOffset(4, 4, 3, 3);
+                hl.spacing = 8f; hl.childAlignment = TextAnchor.MiddleCenter; hl.padding = new RectOffset(4, 4, 3, 3);
                 hl.childControlWidth = false; hl.childControlHeight = false; hl.childForceExpandWidth = false; hl.childForceExpandHeight = false;
-                float bh = ((RectTransform)fb.transform).rect.height; if (bh < 18f || bh > 60f) bh = 30f;
+                float bh = ((RectTransform)fb.transform).rect.height; if (bh < 18f || bh > 60f) bh = 30f; bh = Mathf.Max(bh, 34f);
                 var le = row.AddComponent<LayoutElement>(); le.minHeight = le.preferredHeight = bh + 6f;
                 foreach (string cat in FilterCats)
                 {
@@ -457,9 +463,13 @@ namespace MailCountdown
                     foreach (var t in go.GetComponentsInChildren<TextMeshProUGUI>(true))
                     {
                         t.text = cat == "all" ? Loc.T("h_all") : Loc.T(cat);
-                        t.color = on ? new Color(1f, 0.86f, 0.45f) : new Color(0.62f, 0.62f, 0.62f);
-                        t.fontStyle = on ? FontStyles.Bold : FontStyles.Normal;
+                        // plus voyants : texte plus gros et clair, bouton actif en dore avec texte sombre
+                        t.color = on ? new Color(0.07f, 0.07f, 0.07f) : new Color(0.92f, 0.92f, 0.92f);
+                        t.fontStyle = FontStyles.Bold;
+                        t.enableAutoSizing = false; t.fontSize = Mathf.Max(t.fontSize * 1.25f, 15f);
                     }
+                    foreach (var im in go.GetComponentsInChildren<Image>(true))
+                        if (im != null && im.name != "Icon") im.color = on ? new Color(0.95f, 0.78f, 0.35f, 1f) : new Color(0.24f, 0.25f, 0.26f, 1f);
                     var icon = Find(go.transform, "Icon"); if (icon != null) icon.gameObject.SetActive(false);
                     var rt = (RectTransform)go.transform; rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, bh);
                     go.SetActive(true);
